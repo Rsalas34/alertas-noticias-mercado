@@ -35,6 +35,13 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
 
+      - name: Mensaje de prueba (solo cuando lo corres a mano)
+        if: github.event_name == 'workflow_dispatch'
+        run: python telegram.py enviar "☁️ El vigilante en la nube está funcionando. Te avisará aunque tu PC esté apagada."
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
       - uses: actions/cache/save@v4
         if: always()
         with:
