@@ -1,0 +1,268 @@
+{
+  "cada_cuantos_segundos": 120,
+  "ignorar_noticias_mas_viejas_de_minutos": 90,
+  "max_alertas_por_hora": 12,
+  "traducir_al_espanol": true,
+  "mostrar_precio": true,
+  "umbral_alerta_alta": 26,
+  "umbral_alerta_media": 21,
+  "de_noche_solo_alertas_altas": true,
+  "horario_noche": [
+    "21:00",
+    "06:00"
+  ],
+  "vigilados": {
+    "US10Y": {
+      "precio": "^TNX",
+      "palabras": [
+        "10-year",
+        "treasury yield",
+        "bond yield",
+        "yields"
+      ]
+    },
+    "USO": {
+      "precio": "USO",
+      "palabras": [
+        "crude",
+        "oil price",
+        "wti",
+        "opec"
+      ]
+    },
+    "VIX": {
+      "precio": "^VIX",
+      "palabras": [
+        "vix",
+        "volatility index",
+        "fear gauge"
+      ]
+    },
+    "DXY": {
+      "precio": "DX-Y.NYB",
+      "palabras": [
+        "dollar index",
+        "u.s. dollar",
+        "greenback"
+      ]
+    },
+    "UKOIL": {
+      "precio": "BZ=F",
+      "palabras": [
+        "brent"
+      ]
+    },
+    "SMH": {
+      "precio": "SMH",
+      "palabras": [
+        "semiconductor",
+        "chipmaker",
+        "chip stocks",
+        "export controls"
+      ]
+    },
+    "QQQ": {
+      "precio": "QQQ",
+      "palabras": [
+        "nasdaq"
+      ]
+    },
+    "SPY": {
+      "precio": "SPY",
+      "palabras": [
+        "s&p 500",
+        "wall street",
+        "stock market"
+      ]
+    },
+    "NVDA": {
+      "precio": "NVDA",
+      "palabras": [
+        "nvidia"
+      ]
+    },
+    "TTWO": {
+      "precio": "TTWO",
+      "palabras": [
+        "take-two",
+        "take two interactive",
+        "gta vi",
+        "gta 6",
+        "grand theft auto"
+      ]
+    },
+    "ANT": {
+      "precio": "ANT",
+      "palabras": [
+        "anthropic"
+      ]
+    },
+    "AAPL": {
+      "precio": "AAPL",
+      "palabras": [
+        "apple",
+        "iphone"
+      ]
+    },
+    "AMD": {
+      "precio": "AMD",
+      "palabras": [
+        "amd",
+        "advanced micro devices"
+      ]
+    },
+    "AMZN": {
+      "precio": "AMZN",
+      "palabras": [
+        "amazon",
+        "aws"
+      ]
+    },
+    "BAC": {
+      "precio": "BAC",
+      "palabras": [
+        "bank of america"
+      ]
+    },
+    "CVX": {
+      "precio": "CVX",
+      "palabras": [
+        "chevron"
+      ]
+    },
+    "GLD": {
+      "precio": "GLD",
+      "palabras": [
+        "gold price",
+        "gold prices",
+        "bullion"
+      ]
+    },
+    "META": {
+      "precio": "META",
+      "palabras": [
+        "meta platforms",
+        "facebook",
+        "instagram",
+        "zuckerberg"
+      ]
+    },
+    "MRNA": {
+      "precio": "MRNA",
+      "palabras": [
+        "moderna"
+      ]
+    },
+    "MU": {
+      "precio": "MU",
+      "palabras": [
+        "micron"
+      ]
+    },
+    "NFLX": {
+      "precio": "NFLX",
+      "palabras": [
+        "netflix"
+      ]
+    },
+    "PLTR": {
+      "precio": "PLTR",
+      "palabras": [
+        "palantir"
+      ]
+    },
+    "SLV": {
+      "precio": "SLV",
+      "palabras": [
+        "silver price",
+        "silver prices"
+      ]
+    },
+    "SPCX": {
+      "precio": "SPCX",
+      "palabras": [
+        "spacex",
+        "space exploration technologies"
+      ]
+    },
+    "TNA": {
+      "precio": "TNA",
+      "palabras": [
+        "russell 2000",
+        "small caps",
+        "small-cap"
+      ]
+    },
+    "TSLA": {
+      "precio": "TSLA",
+      "palabras": [
+        "tesla",
+        "elon musk",
+        "musk"
+      ]
+    },
+    "XOM": {
+      "precio": "XOM",
+      "palabras": [
+        "exxon"
+      ]
+    }
+  },
+  "fuentes_rss": [
+    {
+      "nombre": "MarketWatch Última hora",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_bulletins",
+      "peso": 5
+    },
+    {
+      "nombre": "MarketWatch",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "peso": 4
+    },
+    {
+      "nombre": "MarketWatch Pulso",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_marketpulse",
+      "peso": 4
+    },
+    {
+      "nombre": "WSJ Mercados",
+      "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain",
+      "peso": 5
+    },
+    {
+      "nombre": "CNBC Principales",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=100003114",
+      "peso": 4
+    },
+    {
+      "nombre": "CNBC Finanzas",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664",
+      "peso": 4
+    },
+    {
+      "nombre": "CNBC Economía",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258",
+      "peso": 4
+    },
+    {
+      "nombre": "CNBC Resultados",
+      "url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15839135",
+      "peso": 4
+    },
+    {
+      "nombre": "Reserva Federal",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "peso": 6
+    },
+    {
+      "nombre": "Google Noticias: mercado",
+      "url": "https://news.google.com/rss/search?q=(stocks+OR+%22stock+market%22+OR+Fed+OR+tariffs+OR+%22oil+prices%22)+when:2h&hl=en-US&gl=US&ceid=US:en",
+      "peso": 0
+    },
+    {
+      "nombre": "Yahoo Finanzas (tus tickers)",
+      "url": "YAHOO_VIGILADOS",
+      "peso": 0
+    }
+  ]
+}
