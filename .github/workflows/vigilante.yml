@@ -1,0 +1,42 @@
+name: Vigilante de noticias
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # cada 5 minutos (GitHub a veces se atrasa unos minutos)
+  workflow_dispatch:        # botón "Run workflow" para probar a mano
+
+concurrency:
+  group: vigilante
+  cancel-in-progress: false
+
+jobs:
+  revisar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # memoria de noticias ya vistas (para no repetir alertas)
+      - uses: actions/cache/restore@v4
+        with:
+          path: estado.json
+          key: estado-${{ github.run_id }}
+          restore-keys: estado-
+
+      - name: Revisar noticias y avisar por Telegram
+        run: python vigilante.py --una-vez
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: estado.json
+          key: estado-${{ github.run_id }}
